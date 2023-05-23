@@ -15,7 +15,12 @@ const rl = readline.createInterface({
     console.log("opcion 4: Traducir dias de la semana a inglés");
     console.log("opcion 5: Comprar productos");
     console.log("opcion 6: Tablas del 2 al 12");
-    console.log("opcion 7: Salir");
+    console.log("opcion 7: Factorial de un número entero positivo");
+    console.log("opcion 8: CONVIERTE EN MAYÚSCULAS");
+    console.log("opcion 9: Suma de numeros enteros consecutivos a partir de 2 valores");
+    console.log("opcion 10: Duplicar las letras de una palabra")
+    console.log("opcion 11: Suma de matriz")
+    console.log("opcion 12: Salir")
     rl.question("Eliga una opcion", (opcion) => {
     switch(opcion) {
         case "1":
@@ -58,6 +63,52 @@ const rl = readline.createInterface({
             herramienta.Tablamultiplicar()
             break;
         case "7":
+            rl.question('Ingresa un número entero positivo para factorizar...',(num) => {
+                const valor = parseInt(num)
+                const valorfinal = herramienta.Factorial(valor)
+                console.log(valorfinal);
+            rl.close();
+            })
+            break;
+        case "8":
+            rl.question('Ingresa la cadena a convertir en Mayúsculas...',(letras) => {
+                const entrada = letras
+                const resultado = herramienta.Mayusculas(entrada)
+                console.log(resultado);
+            rl.close();
+            })
+            break;
+        case "9":
+            rl.question('Ingrese el primer número...',(numero1) => {
+                const valor1 = parseInt(numero1);
+            rl.question('Ingrese el segundo número...',(numero2) => {
+                const valor2= parseInt(numero2);
+                var valorfinal = herramienta.Sumadenumeros(valor1,valor2);
+                console.log(valorfinal);
+            rl.close();
+            })
+            })
+        break;
+        case "10":
+            rl.question('Ingrese la cadena...',(letra) => {
+                var entrada = letra
+                var resultado = herramienta.Repetirletras(entrada);
+                console.log(resultado);
+            rl.close();
+            })
+        break;
+        case "11":
+            const matriz = [
+                [2,3,5],
+                [0,1,4],
+                [0,0,7],
+            ]
+            const resultado = herramienta.Sumamatriz(matriz);
+            console.log(resultado);
+            console.log(matriz);
+            rl.close();
+        break;
+        case "12":
             console.log("Saliendo del menú...");
             rl.close();
             break;
@@ -68,13 +119,6 @@ const rl = readline.createInterface({
     }
     
 })
-// } while(opcion !== 4)
-// rl.question('Ingrese el ancho del rectángulo: ', (ancho) => {
-//     rl.question('Ingrese el alto del rectángulo: ', (alto) => {
-//     calcularAreaRectangulo(parseInt(ancho), parseInt(alto));
-//     rl.close();
-//     });
-// });
 // readline.question(`What's your name?`, name => {
 //     console.log(`Hi ${name}!`);
 //     rl.close();

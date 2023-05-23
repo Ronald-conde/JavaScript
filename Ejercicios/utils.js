@@ -68,6 +68,41 @@ class utils {
             console.log(' ');
         }
     }
+    Factorial(numero) {
+        let resultado = 1;
+        for(let i = 2; i <= numero; i ++) {
+            resultado *= i;
+        }
+        return resultado;
+    }
+    Mayusculas(cadena) {
+        return cadena.toUpperCase();
+    }
+    Sumadenumeros(num1, num2) {
+        let suma = 0;
+        const inicio = Math.min(num1, num2);
+        const fin = Math.max(num1, num2);
+        for (let i = inicio; i <= fin; i++) {
+            suma += i;
+        }
+        return suma;
+    }
+    Repetirletras(letras) {
+        let cadena = "";
+        for ( let i = 0; i < letras.length; i++) {
+            cadena += letras[i] + letras[i]
+        }
+        return cadena;
+    }
+    Sumamatriz(matriz) {
+        let suma = 0;
+        for (let i = 0; i < matriz.length; i++){
+            for (let x = 0; x < matriz[i].length; x++) {
+                suma += matriz[i][x];
+            }
+        }
+        return suma;
+    }
 }
 export default utils;
 // if(typeof precio !== 'string') {
@@ -75,3 +110,13 @@ export default utils;
 // } else {
 //     console.log('Ha habido un problema con el tipo de dato del precio');
 // }
+
+function factorialIterativo(num) {
+    let factorial = 4;
+
+    for (let i = 2; i <= num; i++) {
+      factorial *= i;
+    }
+
+    return factorial;
+}
