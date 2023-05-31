@@ -2,7 +2,7 @@
 // herramienta.saludo('mundo')
 
 import utils from "./utils.js";
-var herramienta = new utils
+var herramienta = new utils();
 import readline, {clearScreenDown} from "readline";
 const rl = readline.createInterface({
     input: process.stdin,

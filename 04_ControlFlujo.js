@@ -63,7 +63,7 @@ switch ( producto ) {
 // Do-While
 var contador = 11;
 do {
-    console.log('Hola mundo');//Primero ejecuta este bloque de cofigo aunque sea false
+    console.log('Hola mundo');//Primero ejecuta este bloque de codigo aunque sea falso
     contador+= 1
 }while (contador <= 3)
 
